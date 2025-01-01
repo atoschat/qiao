@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background: url('https://cdn.glitch.global/237db8a9-9fdf-4923-87d4-85dd0cc28a0d/bg.jpg?v=1726493194893') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+#about, #gallery, footer, #heart-section {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    color: #333;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about:hover, #gallery:hover, footer:hover, #heart-section:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    color: #333;
+    margin: 20px auto;
+    max-width: 80%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+#about h2, #gallery h2 {
+    color: #ff69b4;
+}
+
+#heart-section {
+    margin: 40px auto;
+    max-width: 80%;
+}
+
+#heart-btn {
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#heart-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff1493;
+}
+
+#gallery {
+    display: none;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    color: #333;
+    margin: 20px auto;
+    max-width: 80%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+#lang-switcher {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#lang-switcher:hover {
+    background-color: #ff1493;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#heart-animation {
+    font-size: 48px;
+    animation: fall 5s ease forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    overflow: hidden;
+}
+
+body.loaded {
+    overflow: auto;
+}
